@@ -1,0 +1,27 @@
+# Project 2
+# 1.Load in Data
+# 2. Sort Data 
+# 3. Compare Data 
+# 4. Calculate R and P values
+# 5. Filter
+#
+
+#from scipy import stats
+#p = stats.pearsonr(row1,row2)
+#p[0] # R
+#p[1] # p-value
+
+from scipy import stats
+
+import pandas as pd
+df = pd.read_csv('tfExp.csv',header=0,index_col=0) 
+
+a = df.iloc[0, 1:769]
+b = df.iloc[0, 2:769]
+
+# Correlation
+for row1 in len(a): # List 1
+    print(row1)
+#    for row2 in len(b): # List 2
+#        p = stats.pearsonr(row1,row2)
+#        print(p)
